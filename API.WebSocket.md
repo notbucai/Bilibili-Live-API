@@ -56,7 +56,7 @@ WS_AUTH_TOKEN_ERROR: -101
 
 | 值 | Body 格式 | 说明 |
 | --- | --- | --- |
-| 0 | JSON | JSON纯文本，可以直接通过 `JSON.stringify` 解析 |
+| 0 | JSON | JSON纯文本，可以直接通过 `JSON.parse` 解析 |
 | 1 | Int 32 Big Endian | Body 内容为房间人气值 |
 | 2 | Buffer | 压缩过的 Buffer，Body 内容需要用zlib.inflate解压出一个新的数据包，然后从数据包格式那一步重新操作一遍 |
 | 3 | Buffer | 压缩信息,需要brotli解压,然后从数据包格式 那一步重新操作一遍 |
